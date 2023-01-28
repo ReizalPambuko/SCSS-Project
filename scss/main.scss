@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+//VARIABLE
+$orange: orange;
+$white: #fff;
+
+//MIXIN
+@mixin containers{
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@mixin flexs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+//NAVBAR
+.header{
+    padding: 1% 0;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: $white;
+    .container{
+       @include containers();
+    }
+    .d-flex{
+       @include flexs();   
+     }
+     h3{
+        font-weight: 500
+     }
+     ul{
+        @include flexs();
+        list-style: none;
+     }
+     ul li a{
+        text-decoration: none;
+        margin: 0 7px;
+        font-size: 13px;
+        color: $white;
+        transition: color .2s;
+     }
+     ul li a:hover{
+        color: $orange;
+     }
+     .chat-btn{
+        border: none;
+        outline: none;
+        background: transparent;
+        color: $white;
+        margin-left: 30px;
+        border: 1px solid $orange;
+        padding: 5px 10px;
+        border-radius: 2px;
+        font-size: 13px;
+        transition: color .2s;
+        cursor: pointer;
+     }
+     .chat-btn:hover{
+        color: $orange;
+     }
+}
+
+//END NAVBAR
+
+//HIRO
+.hiro{
+    padding: 1% 0;
+    background: linear-gradient(450deg,rgb(73, 72, 72),#000);
+    color: $white;
+    .container{
+        @include containers();
+    }
+    .d-flex{
+        @include flexs();
+    }
+    .hiro-item{
+        width: 60%;
+        h1{
+            font-size: 3rem;
+        }
+        h5{
+            letter-spacing: 1px;
+            color: $orange;
+        }
+    }
+    .hiro-img{
+        width: 50%;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+
+
+//END HIRO
