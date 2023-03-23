@@ -65,7 +65,7 @@
 .header .chat-btn {
   border: none;
   outline: none;
-  background: transparent;
+  background-color: red;
   color: #fff;
   margin-left: 30px;
   border: 1px solid orange;
